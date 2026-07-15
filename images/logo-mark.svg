@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44">
+  <defs>
+    <linearGradient id="olbGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2E6FCC"/>
+      <stop offset="100%" stop-color="#0A2342"/>
+    </linearGradient>
+  </defs>
+  <rect width="44" height="44" rx="10" fill="url(#olbGradient)"/>
+  <text x="22" y="28" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="16" fill="#ffffff" letter-spacing="0.5">OLB</text>
+</svg>

@@ -1,0 +1,8 @@
+# robots.txt — Operaciones Logísticas Beltrán S.A.S.
+# Permite el rastreo completo del sitio por todos los motores de búsqueda.
+
+User-agent: *
+Allow: /
+
+# Ubicación del sitemap
+Sitemap: https://www.olbeltran.com/sitemap.xml

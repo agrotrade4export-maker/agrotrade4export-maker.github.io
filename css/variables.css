@@ -1,0 +1,79 @@
+/* ==========================================================================
+   VARIABLES.CSS
+   Operaciones Logísticas Beltrán S.A.S. — Design Tokens
+   Única fuente de verdad para color, tipografía, espaciado y transiciones.
+   Todos los demás módulos CSS deben consumir estas variables; no declarar
+   valores de marca (hex, font-family) fuera de este archivo.
+   ========================================================================== */
+
+:root{
+
+  /* ---------- Color: paleta corporativa ---------- */
+  --color-navy:        #0A2342;  /* Azul Oscuro — fondo primario / headlines */
+  --color-navy-2:      #0E2E58;  /* Azul Oscuro variante */
+  --color-blue:        #1B4F9C;  /* Azul Corporativo — acentos, CTAs, links */
+  --color-blue-2:      #2E6FCC;  /* Azul Corporativo claro — hover, gradientes */
+  --color-ink:         #101826;  /* Texto principal sobre fondo claro */
+  --color-slate:       #5B6B82;  /* Texto secundario */
+  --color-slate-2:     #8492A6;  /* Texto terciario / metadatos */
+  --color-mist:        #F4F6F9;  /* Fondo alterno claro */
+  --color-mist-2:      #EBEFF5;  /* Fondo alterno claro (hover) */
+  --color-line:        #E1E7F0;  /* Bordes y separadores */
+  --color-white:       #FFFFFF;
+  --color-gold:        #F5B942;  /* Acento de calificación (estrellas) */
+
+  --color-footer-bg:   #0D1A2E;  /* Fondo footer */
+  --color-footer-line: #1E3153;  /* Separadores sobre footer */
+  --color-footer-text: #8296B4;  /* Texto secundario sobre footer */
+  --color-whatsapp:    #25D366;  /* Verde oficial WhatsApp (solo botón flotante) */
+
+  /* ---------- Tipografía ---------- */
+  --font-display: 'Montserrat', Arial, sans-serif;   /* Titulares */
+  --font-accent:  'Poppins', Arial, sans-serif;       /* Eyebrows / botones */
+  --font-body:    'Inter', Arial, sans-serif;         /* Cuerpo de texto */
+
+  --fs-h1: clamp(32px, 4.4vw, 48px);
+  --fs-h2: clamp(28px, 3.2vw, 36px);
+  --fs-h3: 19px;
+  --fs-lead: clamp(17px, 1.6vw, 19px);
+  --fs-body: 16px;
+  --fs-small: 13.5px;
+  --fs-eyebrow: 13px;
+
+  /* ---------- Layout ---------- */
+  --container-w: 1240px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-full: 999px;
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 100px;
+
+  /* ---------- Elevación ---------- */
+  --shadow-card: 0 10px 26px rgba(10, 35, 66, 0.07);
+  --shadow-card-hover: 0 16px 34px rgba(10, 35, 66, 0.11);
+  --shadow-btn-hover: 0 10px 22px rgba(27, 79, 156, 0.28);
+  --shadow-whatsapp: 0 10px 26px rgba(37, 211, 102, 0.45);
+
+  /* ---------- Transiciones ---------- */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.7s ease;
+
+  /* ---------- Z-index scale ---------- */
+  --z-nav: 100;
+  --z-float: 200;
+}
+
+/* Respeta la preferencia de movimiento reducido del sistema operativo */
+@media (prefers-reduced-motion: reduce){
+  :root{
+    --transition-fast: 0s;
+    --transition-base: 0s;
+    --transition-slow: 0s;
+  }
+}

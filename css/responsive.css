@@ -1,0 +1,82 @@
+/* ==========================================================================
+   RESPONSIVE.CSS
+   Enfoque Desktop First: los estilos base (variables/layout/components)
+   están pensados para escritorio; aquí se sobrescriben para pantallas
+   menores. Debe cargarse SIEMPRE después de los otros tres archivos.
+   ========================================================================== */
+
+/* ==========================================================================
+   TABLET  (≤ 1080px)
+   ========================================================================== */
+@media (max-width: 1080px){
+  .cards-grid--4{ grid-template-columns:repeat(2,1fr); }
+
+  .timeline{ grid-template-columns:repeat(3,1fr); row-gap:48px; }
+  .timeline::before{ display:none; }
+
+  .stats__grid{ grid-template-columns:repeat(3,1fr); row-gap:36px; }
+  .stat:nth-child(3){ border-right:none; }
+
+  .footer__grid{ grid-template-columns:1fr 1fr; row-gap:40px; }
+}
+
+/* ==========================================================================
+   TABLET PEQUEÑA / MENÚ MÓVIL  (≤ 860px)
+   ========================================================================== */
+@media (max-width: 860px){
+  .nav__links, .nav__cta{ display:none; }
+  .nav__toggle{ display:flex; }
+
+  .nav.nav--open{ background:var(--color-navy); }
+  .nav--open .nav__links{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:22px;
+    position:fixed;
+    top:88px; left:0; right:0;
+    background:var(--color-navy);
+    padding:32px var(--space-md) 40px;
+    border-top:1px solid var(--color-footer-line);
+  }
+  .nav--open .nav__links a{ color:#fff; font-size:16px; }
+  .nav--open .nav__cta{
+    display:block;
+    position:fixed;
+    top:calc(88px + 260px);
+    left:var(--space-md); right:var(--space-md);
+    text-align:center;
+    border-color:#fff;
+  }
+
+  .quienes-somos__grid{ grid-template-columns:1fr; }
+  .quienes-somos__facts{ grid-template-columns:1fr; gap:var(--space-sm); }
+
+  .cards-grid--3{ grid-template-columns:1fr 1fr; }
+
+  .banner__inner{ flex-direction:column; align-items:flex-start; }
+
+  .footer__grid{ grid-template-columns:1fr; }
+}
+
+/* ==========================================================================
+   MÓVIL  (≤ 640px)
+   ========================================================================== */
+@media (max-width: 640px){
+  .section{ padding:72px 0; }
+
+  .hero{ padding-top:110px; }
+  .hero__content{ padding-top:20px; padding-bottom:48px; }
+
+  .cards-grid--4, .cards-grid--3{ grid-template-columns:1fr; }
+
+  .timeline{ grid-template-columns:1fr; row-gap:36px; }
+
+  .stats__grid{ grid-template-columns:1fr 1fr; }
+  .stat:nth-child(2n){ border-right:none; }
+  .stat{ margin-bottom:var(--space-sm); }
+
+  .hero__actions .btn{ width:100%; text-align:center; }
+
+  .whatsapp-float{ width:54px; height:54px; bottom:18px; right:18px; }
+}
